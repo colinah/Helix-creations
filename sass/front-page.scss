@@ -1,0 +1,141 @@
+//Variables
+@import 'variables';
+
+/* Front-Page
+--------------------------------------------- */
+ h2 {
+    color: map-get($map: $colors, $key: orange );
+    padding-left: 12px;
+ }
+
+.front-page__wrapper {
+    padding-top: 74px;
+    min-height: 80vh;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.scroll-wrapper {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.post-wrapper {
+    flex: 0 0 auto;
+    margin: 8px;
+    border-radius: 24px;
+    // background-color: map-get($map: $colors, $key: grey);
+    // border: 1px solid map-get($map: $colors, $key: orange);
+    width: 300px;
+    box-shadow: 10px 10px 15px map-get($map: $colors, $key: grey), -5px 0px 15px map-get($map: $colors, $key: grey);
+    box-sizing: border-box;
+}
+
+.image-wrapper {
+    width: 90%;
+    margin: 8px auto;
+    text-align: center;
+    vertical-align: center;
+}
+
+.image-wrapper img{
+    box-shadow: 1px 1px 5px map-get($map: $colors, $key: grey);
+    border-radius: 14px;
+}
+
+.post-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+
+}
+
+.title-wrapper {
+    margin: 8px auto;
+    width: 90%;
+    color: map-get($map: $colors, $key: orange );
+}
+
+.title-wrapper h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.excerpt-wrapper {
+    color: map-get($map: $colors, $key: dark );
+    margin: 8px auto;
+    width: 90%;
+    height: 90px;
+    overflow-wrap: break-word;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: 298px;
+    max-height: 168px;
+    height: auto;
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-wrapper {
+    display: none
+}
+
+/* Medium devices (Laptops 1024px and up) */
+@media (min-width: 1024px) {
+
+    .front-page__wrapper{
+        display: inline-flex;
+    }
+
+    .primary-content {
+        flex: 4;
+    }
+
+    .sidebar-wrapper {
+        display: flex;
+        flex: 1;
+        height: 1200px;
+        width: 100%;
+        background-color: red;
+
+    }
+
+    .scroll-wrapper {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: none;
+        overflow-y: none;
+        -webkit-overflow-scrolling: none;
+        justify-content: center;
+    }
+
+    .post-wrapper {
+
+        margin: 24px;
+    }
+
+    h2 {
+        margin-left: 60px;
+    }
+
+}

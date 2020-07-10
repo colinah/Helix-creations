@@ -1,0 +1,81 @@
+/*!
+Theme Name: Helix Creations
+Theme URI: http://underscores.me/
+Author: Colin Hale
+Author URI: http://halecolin1.com
+Description: Helix Creations
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: helix-creations
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Helix Creations is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------*/
+//Variables
+@import 'variables';
+//Navigation
+@import 'navigation.scss';
+//Front-Page
+@import 'front-page';
+
+
+
+
+
+/* Main body */
+// #body {
+
+// }
+
+
+body {
+	width: 100vw;
+}
+.page {
+	position: relative;
+}
+.site {
+	margin: 0 auto;
+	max-width: 1200px;
+	background-color: map-get($colors,light);
+	// background-color: rgba(236, 237, 238, 0);
+
+}
+
+
+/* Link css */
+a {
+	color: inherit; /* blue colors for links too */
+	text-decoration: inherit; /* no underline */
+  }
+
+  a:active,
+  a:visited {
+	color: inherit;
+  }
+
+
+/* Medium devices (Laptops 1024px and up) */
+@media (min-width: 1024px) {
+
+	body {
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+}
+
