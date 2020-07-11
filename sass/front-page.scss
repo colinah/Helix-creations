@@ -9,7 +9,7 @@
  }
 
 .front-page__wrapper {
-    padding-top: 74px;
+    padding-top: 20px;
     min-height: 80vh;
 }
 
@@ -99,6 +99,10 @@
     display: none
 }
 
+.show-more {
+    display: none;
+}
+
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
 
@@ -106,9 +110,9 @@
         display: inline-flex;
     }
 
-    .primary-content {
-        flex: 4;
-    }
+    // .primary-content {
+    //     padding-top: 20px;
+    // }
 
     .sidebar-wrapper {
         display: flex;
@@ -136,6 +140,12 @@
 
     h2 {
         margin-left: 60px;
+    }
+
+    .show-more {
+        display: block;
+        text-align: center;
+        color: map-get($map: $colors, $key: orange );
     }
 
 }

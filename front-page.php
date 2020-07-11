@@ -31,6 +31,8 @@
         } wp_reset_query(); // end if
         ?>
     </div> <!-- scroll-wrapper -->
+    <div class="show-more"><a href="#">More...</a></div>
+    
 
     <h2>Most Recent Posts</h2>
     <div class="scroll-wrapper">
@@ -66,6 +68,7 @@
         <h1>Side bar here</h1>
     </div> sidebar-wrapper -->
 </div> <!-- front-page__wrapper -->
+<div class="show-more"><a href="#">More...</a></div>
 
 <?php
 get_footer();

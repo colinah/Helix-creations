@@ -13,7 +13,8 @@ var sticky = navbar.offsetTop;
 var offset = sticky;
 
 function myFunction() {
-  if (window.pageYOffset >= 60) {
+	console.log('scolled');
+  if (window.pageYOffset >= 40) {
 	navbar.classList.add("sticky")
 	whitespace.classList.add("whitespace-padding")
   } else {
