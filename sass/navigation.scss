@@ -162,9 +162,9 @@
 
 }
 
-.nav-main__wrapper {
-	display: none;
-}
+// .nav-main__wrapper {
+// 	display: none;
+// }
 
 .sticky {
 	position: fixed;
@@ -174,6 +174,43 @@
   .sticky + .content {
 	padding-top: 60px;
   }
+
+  .nav-menu {
+	display: none;
+}
+
+input[type="search"] {
+	background-color: map-get($map:  $colors, $key: light);
+	border-top-style: none;
+	border-right-style:none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+
+::-webkit-input-placeholder { /* Edge */
+color: map-get($map:  $colors, $key: orange);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: map-get($map:  $colors, $key: orange);
+}
+
+::placeholder {
+color: map-get($map:  $colors, $key: orange);
+}
+
+input[type="submit"] {
+	margin-left: 8px;
+	position: relative;
+	top: 2px;
+	background-color: rgba(0,0,0,0);
+	border: 3px solid map-get($map:  $colors, $key: light);
+	color: map-get($map:  $colors, $key: light);
+	border-radius: 10px;
+	font-weight: bold;
+	// font-size: 24px;
+	padding: 4px;
+}
 
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
@@ -199,28 +236,16 @@
 		display: none;
 	}
 
-	.nav-main__wrapper {
-		display: inline-block;
-		box-sizing: border-box;
-	}
-
 	.nav-menu {
-		// display: inline-block;
-		position: relative;
-		margin-right: 60px;
-
-	}
-
-	.nav-menu__items {
-		position: absolute;
-		bottom: 0;
+		display: inline-flex;
+		align-items: flex-end;
+		margin-right: 80px;
+		transition: ease-in;
 	}
 
 	.nav-menu__item {
-		padding: 16px;
-		display: inline-block;
-		vertical-align: bottom;
-		box-sizing: border-box;
+		padding: 16px 26px 18px 16px;
+		display: flex;
 	}
 
 	.nav-menu__item:hover {
@@ -228,7 +253,41 @@
 		cursor: pointer;
 	}
 
-	.sticky {
+	input[type="search"] {
+		position: relative;
+		top: 4px;
+		// background-color: red;
+		border-top-style: none;
+		border-right-style:none;
+		border-left-style: none;
+		border-bottom-style: groove;
+		border-bottom: 1px solid map-get($map:  $colors, $key: orange);
+	}
+
+	::-webkit-input-placeholder { /* Edge */
+	color: map-get($map:  $colors, $key: orange);
+	}
+	
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: map-get($map:  $colors, $key: orange);
+	}
+	
+	::placeholder {
+	color: map-get($map:  $colors, $key: orange);
+	}
+
+	input[type="submit"] {
+		position: relative;
+		top: 4px;
+		background-color: map-get($map: $colors, $key: light);
+		border: 1px solid map-get($map:  $colors, $key: orange);
+		color: map-get($map:  $colors, $key: orange);
+		border-radius: 10px;
+		font-weight: normal;
+		font-size: 1rem;
+	}
+
+	.sticky { 
 		position: fixed;
 		top: 0;
 	  }

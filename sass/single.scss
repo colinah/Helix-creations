@@ -1,0 +1,32 @@
+@import 'variables';
+
+    .single-container {
+        display: inline-flex;
+        justify-content: space-between;
+        background-color: blue;
+        width:100%;
+    }
+
+    .single-content__wrapper {
+        flex: 5;
+    }
+
+    .single-sidebar__wrapper {
+        flex: 2;
+        background-color: red;
+    }
+
+ .single-title {
+
+ }
+
+ .single-video {
+
+ }
+
+
+
+/* Medium devices (Laptops 1024px and up) */
+@media (min-width: 1024px) {
+
+}

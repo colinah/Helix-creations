@@ -9,14 +9,17 @@
 
 get_header();
 ?>
-	<h1>Single</h1>
-
-	<main id="primary" class="site-main">
-
+<div class="single-container">
+	<main id="primary" class="single-content__wrapper">
+		<!-- <div class="single-content__wrapper"> -->
 		<?php
 		while ( have_posts() ) :
 			the_post();
 			?>
+
+				<div>
+					<h2><?php the_title(); ?></h2>
+				</div>
 				<div>
 					<?php the_field('video_url'); ?>
 				</div>
@@ -24,7 +27,7 @@ get_header();
 
 
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			// get_template_part( 'template-parts/content', get_post_type() );
 
 			the_post_navigation(
 				array(
@@ -40,9 +43,13 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+		<!-- </div> .single-content__wrapper -->
 
 	</main><!-- #main -->
 
+	<div class="single-sidebar__wrapper">
+		<?php get_sidebar(); ?>
+	</div> <!-- .single-sidebar__wrapper -->
+</div> <!-- .single-container -->
 <?php
-get_sidebar();
 get_footer();

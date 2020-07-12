@@ -49,27 +49,23 @@
 								<div id="primary-menu" class="menu">
 									<ul>
 										<li class="page_item" ><a href="<?php  echo site_url('/') ?>">Home</a></li>
-										<li class="page_item" ><a href="<?php  echo site_url('/vlog') ?>">Vlog</a></li>
+										<!-- <li class="page_item" ><a href="<?php  echo site_url('/vlog') ?>">Vlog</a></li> -->
 										<li class="page_item" ><a href="<?php  echo site_url('/blog') ?>">Blog</a></li>
 										<li class="page_item" ><a href="<?php  echo site_url('/community') ?>">Community</a></li>
-										<li class="page_item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></li>
+										<!-- <li class="page_item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></li> -->
 										<li><?php get_search_form(); ?></li>
 									</ul>
 								</div>
 						</div> <!-- .mobile-nav -->
 				</nav><!-- #site-navigation -->
 			</div><!-- .mobile-nav__wrapper -->
-			<div class="nav-main__wrapper">
 				<div class="nav-menu">
-					<div class="nav-menu__items">
-						<span class="nav-menu__item" ><a href="<?php  echo site_url('/') ?>">Home</a></span>
-						<span class="nav-menu__item" ><a href="<?php  echo site_url('/vlog') ?>">Vlog</a></span>
-						<span class="nav-menu__item" ><a href="<?php  echo site_url('/blog') ?>">Blog</a></span>
-						<span class="nav-menu__item" ><a href="<?php  echo site_url('/community') ?>">Community</a></span>
-						<span class="nav-menu__item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></span>
-					</div>
+					<span class="nav-menu__item" ><a href="<?php  echo site_url('/') ?>">Home</a></span>
+					<span class="nav-menu__item" ><a href="<?php  echo site_url('/blog') ?>">Blog</a></span>
+					<span class="nav-menu__item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></span>
+					<!-- <span class="nav-menu__item" id="nav-search__title" onclick="toggleVisibility('nav-search__form')">Search ></span> -->
+					<span class="nav-menu__item" id="nav-search__form"><?php get_search_form(); ?></span>
 				</div>
-			</div>
 		</div> <!-- .site-header -->
 	</header><!-- #masthead -->
 	<div class="content">
