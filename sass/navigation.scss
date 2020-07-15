@@ -148,6 +148,7 @@
 }
 
 .site-header__wrapper {
+	z-index: 1000;
 	display: flex;
 	width: 100%;
 }

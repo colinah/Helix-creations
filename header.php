@@ -51,8 +51,8 @@
 										<li class="page_item" ><a href="<?php  echo site_url('/') ?>">Home</a></li>
 										<!-- <li class="page_item" ><a href="<?php  echo site_url('/vlog') ?>">Vlog</a></li> -->
 										<li class="page_item" ><a href="<?php  echo site_url('/blog') ?>">Blog</a></li>
-										<li class="page_item" ><a href="<?php  echo site_url('/community') ?>">Community</a></li>
-										<!-- <li class="page_item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></li> -->
+										<!-- <li class="page_item" ><a href="<?php  echo site_url('/community') ?>">Community</a></li> -->
+										<li class="page_item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></li>
 										<li><?php get_search_form(); ?></li>
 									</ul>
 								</div>

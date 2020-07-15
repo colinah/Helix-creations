@@ -101,10 +101,10 @@ h2 {
     overflow-y: none;
     -webkit-overflow-scrolling: none;
     justify-content: center; }
+  .title-tags {
+    margin-left: 60px; }
   .post-wrapper {
     margin: 24px; }
-  h2 {
-    margin-left: 60px; }
   .show-more {
     display: block;
     text-align: center;
@@ -225,6 +225,7 @@ h2 {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
 
 .site-header__wrapper {
+  z-index: 1000;
   display: flex;
   width: 100%; }
 
@@ -371,20 +372,62 @@ input[type="submit"] {
 
 /* Medium devices (Laptops 1024px and up) */
 
-.single-container {
-  display: inline-flex;
-  justify-content: space-between;
-  background-color: blue;
-  width: 100%; }
+body {
+  width: 100vw; }
 
-.single-content__wrapper {
-  flex: 5; }
+.page {
+  position: relative; }
+
+.site {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #ebeced; }
 
 .single-sidebar__wrapper {
-  flex: 2;
-  background-color: red; }
+  width: 100%; }
+
+.single-video__wrapper {
+  max-width: 640px;
+  margin: 40px auto; }
+
+.single-video {
+  display: block; }
+
+.single-subscribe {
+  display: block;
+  width: 120px;
+  height: 40px;
+  float: right; }
+
+.single-content {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 90%; }
+
+ul {
+  list-style-type: none;
+  margin-left: 0; }
+
+.single-date {
+  padding-left: 12px; }
 
 /* Medium devices (Laptops 1024px and up) */
+@media (min-width: 1024px) {
+  .primary-content__single {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%; }
+  .single-title {
+    margin-left: 60px;
+    margin-bottom: 0; }
+  .single-date {
+    margin-left: 60px; }
+  .single-content__wrapper {
+    flex: 1;
+    width: 900px; }
+  .single-sidebar__wrapper {
+    flex: 1;
+    margin-right: 40px; } }
 
 /*!
 Theme Name: Helix Creations
@@ -527,6 +570,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
 
 .site-header__wrapper {
+  z-index: 1000;
   display: flex;
   width: 100%; }
 
@@ -775,14 +819,71 @@ h2 {
     overflow-y: none;
     -webkit-overflow-scrolling: none;
     justify-content: center; }
+  .title-tags {
+    margin-left: 60px; }
   .post-wrapper {
     margin: 24px; }
-  h2 {
-    margin-left: 60px; }
   .show-more {
     display: block;
     text-align: center;
     color: #af611c; } }
+
+body {
+  width: 100vw; }
+
+.page {
+  position: relative; }
+
+.site {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #ebeced; }
+
+.single-sidebar__wrapper {
+  width: 100%; }
+
+.single-video__wrapper {
+  max-width: 640px;
+  margin: 40px auto; }
+
+.single-video {
+  display: block; }
+
+.single-subscribe {
+  display: block;
+  width: 120px;
+  height: 40px;
+  float: right; }
+
+.single-content {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 90%; }
+
+ul {
+  list-style-type: none;
+  margin-left: 0; }
+
+.single-date {
+  padding-left: 12px; }
+
+/* Medium devices (Laptops 1024px and up) */
+@media (min-width: 1024px) {
+  .primary-content__single {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%; }
+  .single-title {
+    margin-left: 60px;
+    margin-bottom: 0; }
+  .single-date {
+    margin-left: 60px; }
+  .single-content__wrapper {
+    flex: 1;
+    width: 900px; }
+  .single-sidebar__wrapper {
+    flex: 1;
+    margin-right: 40px; } }
 
 /* Main body */
 body {
@@ -810,5 +911,11 @@ a:visited {
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
   body {
-    margin: 0 auto;
-    max-width: 1200px; } }
+    margin: 0 auto !important;
+    max-width: 1200px; }
+  .wpforms-form {
+    width: 80%;
+    margin: 0 auto; }
+  .form-submit {
+    color: #af611c !important;
+    border: 1px solid #af611c !important; } }

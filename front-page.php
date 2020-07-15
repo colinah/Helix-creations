@@ -3,12 +3,13 @@
 ?>
 <div class="front-page__wrapper">
     <div class="primary-content">
-    <h2>Featured Posts</h2>
+    <h2 class="title-tags">Featured Posts</h2>
     <div class="scroll-wrapper">
     <?php 
         $args = array (
             'post_type' => 'post',
-            'category_name' => 'featured'
+            'category_name' => 'featured',
+            'posts_per_page' => '-1'
         );
         $featured_query = new WP_Query( $args );
         if ( $featured_query->have_posts() ) {
@@ -34,13 +35,14 @@
     <div class="show-more"><a href="#">More...</a></div>
     
 
-    <h2>Most Recent Posts</h2>
+    <h2 class="title-tags">Most Recent Posts</h2>
     <div class="scroll-wrapper">
     <?php 
         $args=array(
             'posts_per_page' => 6, 
             'post_type' => 'post',
-            'orderby' => array('date' => 'DESC')
+            'orderby' => array('date' => 'DESC'),
+            'posts_per_page' => '6'
         );
         $recent_query = new WP_Query( $args );
         if ( $recent_query->have_posts() ) {
@@ -63,12 +65,14 @@
         } wp_reset_query(); // end if
         ?>
     </div> <!-- scroll-wrapper -->
+    <div class="show-more"><a href="#">More...</a></div>
     </div> <!-- primary-content -->
     <!-- <div class="sidebar-wrapper">
         <h1>Side bar here</h1>
     </div> sidebar-wrapper -->
 </div> <!-- front-page__wrapper -->
-<div class="show-more"><a href="#">More...</a></div>
+
+
 
 <?php
 get_footer();

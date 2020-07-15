@@ -1,57 +1,52 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Helix_Creations
- */
-
 get_header();
 ?>
+<div class="front-page__wrapper">
+    <div class="primary-content__single">
+	<main id="primary">
+		<div class="single-content__wrapper">
+		<h1>This is here</h1>
+	    <div class="scroll-wrapper">
+    <?php 
+        $args = array (
+            'post_type' => 'post',
+            'category_name' => 'featured',
+            'posts_per_page' => '6'
+        );
+		$featured_query = new WP_Query( $args );
+		var_dump($featured_query);
+        if ( $featured_query->have_posts() ) {
+            while ( $featured_query->have_posts() ) {
+                $featured_query->the_post(); 
+                ?>
+                    <div class="post-wrapper">
+                        <a href="<?php the_permalink(); ?>" >
+                            <div class="image-wrapper">
+                                <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" />
+                            </div>
+                            <div class="title-wrapper">
+                                <h3><?php the_title(); ?><h3>
+                            </div>
+                            <div class="excerpt-wrapper"><?php the_excerpt(); ?></div>
+                        </a>
+                    </div>
+                <?php
+            } // end while
+        } wp_reset_query(); // end if
+        ?>
+    </div> <!-- scroll-wrapper -->
 
-	<main id="primary" class="site-main">
-		<h1>index</h1>
-		<?php
-		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title();?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+		</div> <!-- .single-content__wrapper -->
 	</main><!-- #main -->
 
+	<div class="single-sidebar__wrapper">
+		<?php get_sidebar(); ?>
+	</div> <!-- .single-sidebar__wrapper -->
+
+    </div> <!-- primary-content -->
+</div> <!-- front-page__wrapper -->
+
 <?php
-get_sidebar();
 get_footer();
+?>

@@ -32,6 +32,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'navigation.scss';
 //Front-Page
 @import 'front-page';
+//Singe
+@import 'single';
 
 
 
@@ -73,8 +75,20 @@ a {
 @media (min-width: 1024px) {
 
 	body {
-		margin: 0 auto;
+		margin: 0 auto !important;
 		max-width: 1200px;
 	}
+
+	.wpforms-form {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.form-submit {
+		color:map-get($map: $colors, $key: orange) !important;
+		border: 1px solid map-get($map: $colors, $key: orange) !important;
+	}
+
+
 }
 

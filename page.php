@@ -1,39 +1,50 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Helix_Creations
- */
-
 get_header();
 ?>
-	<h1>index</h1>
-	<main id="primary" class="site-main">
-
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+<div class="front-page__wrapper">
+    <div class="primary-content__single primary-content">
+	<main id="primary">
+		<div class="single-content__wrapper">
+			<h2 class="title-tags">All Posts</h2>
+		<div class="scroll-wrapper">
+    <?php 
+        $args = array (
+            'post_type' => 'post',
+            'category_name' => 'featured',
+            'posts_per_page' => '6'
+        );
+        $featured_query = new WP_Query( $args );
+        if ( $featured_query->have_posts() ) {
+            while ( $featured_query->have_posts() ) {
+                $featured_query->the_post(); 
+                ?>
+                    <div class="post-wrapper">
+                        <a href="<?php the_permalink(); ?>" >
+                            <div class="image-wrapper">
+                                <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" />
+                            </div>
+                            <div class="title-wrapper">
+                                <h3><?php the_title(); ?><h3>
+                            </div>
+                            <div class="excerpt-wrapper"><?php the_excerpt(); ?></div>
+                        </a>
+                    </div>
+                <?php
+            } // end while
+        } wp_reset_query(); // end if
+        ?>
+    </div> <!-- scroll-wrapper -->
+		</div> <!-- .single-content__wrapper -->
 
 	</main><!-- #main -->
 
+	<div class="single-sidebar__wrapper">
+		<?php get_sidebar(); ?>
+	</div> <!-- .single-sidebar__wrapper -->
+
+    </div> <!-- primary-content -->
+</div> <!-- front-page__wrapper -->
+
 <?php
-get_sidebar();
 get_footer();
+?>
