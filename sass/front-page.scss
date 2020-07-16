@@ -103,6 +103,11 @@
     display: none;
 }
 
+.title-tags{
+    font-size: 28px;
+    color: map-get($map: $colors, $key: logo);
+}
+
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
 

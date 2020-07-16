@@ -17,7 +17,6 @@
 		<div class="entry-meta">
 			<?php
 			helix_creations_posted_on();
-			helix_creations_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

@@ -83,6 +83,10 @@ h2 {
 .show-more {
   display: none; }
 
+.title-tags {
+  font-size: 28px;
+  color: #0f365b; }
+
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
   .front-page__wrapper {
@@ -801,6 +805,10 @@ h2 {
 .show-more {
   display: none; }
 
+.title-tags {
+  font-size: 28px;
+  color: #0f365b; }
+
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
   .front-page__wrapper {
@@ -907,6 +915,12 @@ a {
 a:active,
 a:visited {
   color: inherit; }
+
+.page-header {
+  display: block; }
+
+.page-content {
+  padding: 6px; }
 
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {

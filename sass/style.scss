@@ -70,6 +70,14 @@ a {
 	color: inherit;
   }
 
+  .page-header {
+	  display: block;
+  }
+
+  .page-content {
+	  padding: 6px;
+  }
+
 
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {

@@ -142,4 +142,3 @@ function toggleVisibility(id) {
 		}
 	}
 }() );
-

@@ -1,53 +1,52 @@
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package Helix_Creations
- */
-
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'helix-creations' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
+<div class="front-page__wrapper">
+    <div class="primary-content__single primary-content">
+	<main id="primary">
+		<div class="single-content__wrapper">
+			<h2 class="title-tags">Search Results</h2>
+		<div class="scroll-wrapper">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+       		if ( have_posts() ) :
+				while ( have_posts() ) :
+					the_post();
+                ?>
+                    <div class="post-wrapper">
+                        <a href="<?php the_permalink(); ?>" >
+                            <div class="image-wrapper">
+                                <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" />
+                            </div>
+                            <div class="title-wrapper">
+                                <h3><?php the_title(); ?><h3>
+                            </div>
+                            <div class="excerpt-wrapper"><?php the_excerpt(); ?></div>
+                        </a>
+                    </div>
+				<?php
+				endwhile;
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+				the_posts_navigation();
+	
+			else :
+	
+				get_template_part( 'template-parts/content', 'none' );
+	
+			endif;
+		wp_reset_query(); // end if
+        ?>
+    </div> <!-- scroll-wrapper -->
+		</div> <!-- .single-content__wrapper -->
 
 	</main><!-- #main -->
 
+	<div class="single-sidebar__wrapper">
+		<?php get_sidebar(); ?>
+	</div> <!-- .single-sidebar__wrapper -->
+
+    </div> <!-- primary-content -->
+</div> <!-- front-page__wrapper -->
+
 <?php
-get_sidebar();
 get_footer();
+?>
