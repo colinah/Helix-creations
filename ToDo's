@@ -6,21 +6,6 @@ Yoast SEO
 ##--Icons--##
 https://www.iconfinder.com/social-media-icons
 
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				helix_creations_posted_on();
-				helix_creations_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+##-SEO--##
+seo for brycen
+https://www.youtube.com/watch?v=jN_xx9jGDVc&feature=emb_rel_end

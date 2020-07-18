@@ -78,6 +78,16 @@ a {
 	  padding: 6px;
   }
 
+  .privacy-content {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.single-title {
+	color: map-get($map: $colors, $key: logo);
+	font-size: 28px;
+}
+
 
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
@@ -96,7 +106,5 @@ a {
 		color:map-get($map: $colors, $key: orange) !important;
 		border: 1px solid map-get($map: $colors, $key: orange) !important;
 	}
-
-
 }
 

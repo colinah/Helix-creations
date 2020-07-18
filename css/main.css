@@ -922,6 +922,14 @@ a:visited {
 .page-content {
   padding: 6px; }
 
+.privacy-content {
+  width: 80%;
+  margin: 0 auto; }
+
+.single-title {
+  color: #0f365b;
+  font-size: 28px; }
+
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {
   body {

@@ -9,7 +9,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 			?>
-					<h2 class="single-title"><?php the_title(); ?></h2>
+					<h1 class="single-title"><?php the_title(); ?></h1>
 					<div class="single-date">Posted on: <?php the_date(); ?></div>
 				<div class="single-video__wrapper">
 					<div class="single-video">

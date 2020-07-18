@@ -42,8 +42,8 @@
 				<span class="footer_link--item"><a href="<?php echo site_url('/contact') ?>">Contact </a></span> <!-- WORK HERE -->
 				<!-- <span class="footer_link--item">| </span>
 				<span class="footer_link--item"><a href="">Signup/Login </a></span> WORK HERE -->
-				<span class="footer_link--item">| </span>
-				<span class="footer_link--item" onclick="updateId('mobile-nav1','mobile-nav2')" >Search</span> <!-- WORK HERE -->
+				<!-- <span class="footer_link--item">| </span>
+				<span class="footer_link--item" onclick="updateId('mobile-nav1','mobile-nav2')" >Search</span> WORK HERE -->
 			</div>
 			<div class="trademark">© <?php echo current_time('Y');?> Helix Creations</div>
 		</div><!-- .site-info -->
