@@ -5,7 +5,7 @@ get_header();
     <div class="primary-content__single primary-content">
 	<main id="primary">
 		<div class="single-content__wrapper">
-			<h2 class="title-tags">All Posts</h2>
+			<h2 class="section-title">All Posts</h2>
 		<div class="scroll-wrapper">
     <?php 
         $args = array (

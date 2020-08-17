@@ -46,6 +46,12 @@ if ( ! function_exists( 'helix_creations_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		// Image Sizes
+		add_image_size('banner', 1900, 600 ,true);
+		add_image_size('post-thumbnail-large', 1280, 720 ,true);
+		add_image_size('post-thumbnail-medium', 640, 360 ,true);
+		add_image_size('portrait',360 ,640 ,true);
+		add_image_size('post-thumbnail-small', 320, 180 ,true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(

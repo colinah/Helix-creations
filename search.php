@@ -5,7 +5,7 @@ get_header();
     <div class="primary-content__single primary-content">
 	<main id="primary">
 		<div class="single-content__wrapper">
-			<h2 class="title-tags">Search Results</h2>
+			<h2 class="section-title">Search Results</h2>
 		<div class="scroll-wrapper">
 			<?php
        		if ( have_posts() ) :

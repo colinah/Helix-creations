@@ -1,0 +1,52 @@
+@import 'variables';
+
+body {
+	width: 100vw;
+}
+.page {
+	position: relative;
+}
+.site {
+	margin: 0 auto;
+	max-width: 1200px;
+	background-color: map-get($colors,light);
+}
+
+.single-sidebar__wrapper {
+    width: 100%;
+}
+
+.single-content{
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 90%
+ }
+
+ .privacy-content {
+	width: 90%;
+	margin: 0 auto;
+}
+
+ /* Medium devices (Laptops 1024px and up) */
+@media (min-width: 1024px) {
+    .primary-content__single {
+        display: inline-flex;
+        justify-content: space-between;
+        width:100%;
+    }
+
+    .single-date {
+        margin-left: 60px;
+    }
+
+    .single-content__wrapper {
+        flex: 1;
+        width: 900px;
+    }
+
+    .single-sidebar__wrapper {
+        flex: 1;
+        margin-right: 40px;
+        // background-color: red;
+    }
+}

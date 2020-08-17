@@ -5,7 +5,7 @@ get_header();
     <div class="primary-content__single primary-content">
 	<main id="primary">
 		<div class="single-content__wrapper">
-			<h2 class="title-tags">Privacy Policy</h2>
+			<h2 class="section-title">Privacy Policy</h2>
 			<div class="privacy-content">
 				<?php 
 				while(have_posts()){

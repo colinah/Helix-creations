@@ -29,37 +29,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 //Variables
 @import 'variables';
 //Navigation
-@import 'navigation.scss';
+@import 'navigation';
 //Front-Page
-@import 'front-page';
+@import 'page';
 //Singe
 @import 'single';
 
 
-
-
-
-/* Main body */
-// #body {
-
-// }
-
-
 body {
-	width: 100vw;
-}
-.page {
-	position: relative;
-}
-.site {
-	margin: 0 auto;
-	max-width: 1200px;
-	background-color: map-get($colors,light);
-	// background-color: rgba(236, 237, 238, 0);
-
+    font-family: 'Oswald', Helvetica, Arial, serif;
 }
 
-/* Link css */
+
 a {
 	color: inherit; /* blue colors for links too */
 	text-decoration: inherit; /* no underline */
@@ -69,6 +50,9 @@ a {
   a:visited {
 	color: inherit;
   }
+p {
+	padding: 8px;
+}
 
   .page-header {
 	  display: block;
@@ -78,16 +62,11 @@ a {
 	  padding: 6px;
   }
 
-  .privacy-content {
-	width: 80%;
-	margin: 0 auto;
+  .bio-portrait {
+    height: 300px;
+    float: left;
+    margin: 10px;
 }
-
-.single-title {
-	color: map-get($map: $colors, $key: logo);
-	font-size: 28px;
-}
-
 
 /* Medium devices (Laptops 1024px and up) */
 @media (min-width: 1024px) {

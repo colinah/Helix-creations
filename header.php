@@ -15,6 +15,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
@@ -49,10 +51,9 @@
 								<div id="primary-menu" class="menu">
 									<ul>
 										<li class="page_item" ><a href="<?php  echo site_url('/') ?>">Home</a></li>
-										<!-- <li class="page_item" ><a href="<?php  echo site_url('/vlog') ?>">Vlog</a></li> -->
 										<li class="page_item" ><a href="<?php  echo site_url('/blog') ?>">Blog</a></li>
-										<!-- <li class="page_item" ><a href="<?php  echo site_url('/community') ?>">Community</a></li> -->
 										<li class="page_item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></li>
+										<li class="page_item" ><a href="<?php  echo site_url('/about-me') ?>">About Me</a></li>
 										<li><?php get_search_form(); ?></li>
 									</ul>
 								</div>
@@ -63,6 +64,7 @@
 					<span class="nav-menu__item" ><a href="<?php  echo site_url('/') ?>">Home</a></span>
 					<span class="nav-menu__item" ><a href="<?php  echo site_url('/blog') ?>">Blog</a></span>
 					<span class="nav-menu__item" ><a href="<?php  echo site_url('/contact') ?>">Contact</a></span>
+					<span class="nav-menu__item" ><a href="<?php  echo site_url('/about-me') ?>">About Me</a></span>
 					<!-- <span class="nav-menu__item" id="nav-search__title" onclick="toggleVisibility('nav-search__form')">Search ></span> -->
 					<span class="nav-menu__item" id="nav-search__form"><?php get_search_form(); ?></span>
 				</div>

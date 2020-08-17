@@ -3,7 +3,22 @@
 ?>
 <div class="front-page__wrapper">
     <div class="primary-content">
-    <h2 class="title-tags">Featured Posts</h2>
+    <div id="banner-wrapper" style="
+        background-image:url(http://helix-creations.local/wp-content/uploads/2020/08/HelixBanner.jpg);
+        background-repeat: no-repeat;
+                background-position: center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
+        <div class="banner-overlay">
+            <div class="banner-title__wrapper">
+                <h1 class="banner-title">DIY: Ropes Course and Home Construction Projects</h1>
+                <div> by <span style="text-decoration:bold;">Brycen Hale</span></div>
+            </div>
+        </div>
+    </div>
+    <h2 class="section-title section-title__margin"><a href="/category/featured">Featured Posts</a></h2>
     <div class="scroll-wrapper">
     <?php 
         $args = array (
@@ -32,10 +47,10 @@
         } wp_reset_query(); // end if
         ?>
     </div> <!-- scroll-wrapper -->
-    <div class="show-more"><a href="#">More...</a></div>
+    <div class="show-more"><a href="/category/featured">More...</a></div>
     
 
-    <h2 class="title-tags">Most Recent Posts</h2>
+    <h2 class="section-title section-title__margin"><a href="/blog">Most Recent Posts</a></h2>
     <div class="scroll-wrapper">
     <?php 
         $args=array(
@@ -65,7 +80,7 @@
         } wp_reset_query(); // end if
         ?>
     </div> <!-- scroll-wrapper -->
-    <div class="show-more"><a href="#">More...</a></div>
+    <div class="show-more"><a href="/blog">More...</a></div>
     </div> <!-- primary-content -->
     <!-- <div class="sidebar-wrapper">
         <h1>Side bar here</h1>
